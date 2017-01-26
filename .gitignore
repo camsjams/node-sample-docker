@@ -1,0 +1,15 @@
+*.pid
+*.log*
+*~
+target
+.classpath
+.project
+.settings
+.idea
+mem.properties
+mem.script
+node_modules/
+webpack-assets.json
+webpack-stats.json
+*.swp
+*.swo
