@@ -16,8 +16,8 @@ var config = {
 
 const app = new Express();
 app.use(compression());
-app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')));
-app.use(Express.static(path.join(__dirname, '..', 'static')));
+app.use(favicon(path.join(__dirname, 'static', 'favicon.ico')));
+app.use(Express.static(path.join(__dirname, 'static')));
 
 // install controllers
 app.use(pingController, indexController);
