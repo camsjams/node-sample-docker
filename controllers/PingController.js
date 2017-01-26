@@ -10,3 +10,5 @@ router.get('/ping', (req, res) => {
 		env: process.env.NODE_ENV
 	});
 });
+
+module.exports = router;

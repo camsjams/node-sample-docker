@@ -4,3 +4,5 @@ var router = express.Router();
 router.get('/', (req, res) => {
 	res.send('Welp. Hello there World!!!');
 });
+
+module.exports = router;
