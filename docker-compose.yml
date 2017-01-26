@@ -9,7 +9,15 @@ services:
       - '10001:10001'
     volumes:
         - .:/var/www
+        # this stores node_modules ONLY inside the image and downstream container
+        # ensures greatest compatibility to startup app regardless of Host OS (Windows/Mac/Linux)
+        # otherwise we can instead install node_modules in the shared volume
+        # and they would be used inside docker from HOST filesystem
+        - /var/www/node_modules
     working_dir: /var/www
     command: npm start
     environment:
+      # @see 12 factor app - https://12factor.net/
       NODE_ENV: local
+      HOST: localhost
+      POR: 10001
